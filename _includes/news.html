@@ -1,0 +1,41 @@
+<section id="news" data-stellar-background-ratio="2.5">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12 col-sm-12">
+      <!-- SECTION TITLE -->
+        <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+          <h2>Latest News</h2>
+        </div>
+      </div>
+      {%- if site.posts.size > 0 -%}
+        {%- for post in site.posts -%}
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <div class="col-md-4 col-sm-6">
+          <!-- NEWS THUMB -->
+            <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+            <a href="news-detail.html">
+              <img src="{{ post.image }}" class="img-responsive" alt="{{ post.image-alt }}">
+            </a>
+              <div class="news-info">
+                <span>{{ post.date | date: date_format }}</span>
+                <h3><a href="news-detail.html">{{ post.title | escape }}</a></h3>
+                <p>
+                  {%- if site.show_excerpts -%}
+                    {{ post.excerpt }}
+                  {%- endif -%}
+                </p>
+                <div class="author">
+                  <img src="images/author-image.jpg" class="img-responsive" alt="">
+                  <div class="author-info">
+                    <h5>{{ post.author }}</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
+</section>

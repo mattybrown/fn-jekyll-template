@@ -1,0 +1,24 @@
+<section id="listings">
+  <div class="row">
+
+    <div class="col-md-12 col-sm-12">
+      <div id="listings-carousel" class="owl-carousel owl-theme">
+
+            {%- if site.data.listings -%}
+              {%- for listing in site.data.listings -%}
+                  <div class="item">
+                    <div class="listing-item">
+                      <img src="{{ listing.Image }}" class="img-responsive">
+                    </div>
+                    <h5>{{ listing.Address }}</h5>
+                    <p>{{ listing.Price }}</p>
+                  </div>
+
+              {%- endfor -%}
+            {%- endif -%}
+
+      </div>
+    </div>
+
+  </div>
+</section>
