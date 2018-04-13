@@ -8,10 +8,13 @@
               {%- for listing in site.data.listings -%}
                   <div class="item">
                     <div class="listing-item">
-                      <img src="{{ listing.Image }}" class="img-responsive">
+                      <a href="http://marlboroughrealestate.co.nz{{ listing.link }}"><img src="{{ listing.image }}" class="img-responsive"></a>
                     </div>
-                    <h5>{{ listing.Address }}</h5>
-                    <p>{{ listing.Price }}</p>
+                    <div class="listing-text">
+                      <h5><a href="http://marlboroughrealestate.co.nz{{ listing.link }}">{{ listing.address }}</a></h5>
+                      <p>{{ listing.bed }} | {{ listing.bath }} | {{ listing.car }} | {{ listing.land }}</p>
+                      <p>{{ listing.price }}</p>
+                    </div>
                   </div>
 
               {%- endfor -%}
