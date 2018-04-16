@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-date:   2018-04-12 11:12:24 +1200
+date:   2018-04-16 11:12:24 +1200
 categories: jekyll update
-author: "Ian Fyfe"
+author: "Jenny Fyfe"
 image: "assets/images/news-image1.jpg"
 image-alt: "Alt text for the image"
 ---

@@ -212,6 +212,9 @@
   .listing-text{
     padding:10px;
   }
+  .listing-item img{
+    max-height:424px;
+  }
 
 
   /*---------------------------------------
@@ -219,7 +222,10 @@
   -----------------------------------------*/
 
   #about {
-    background: url('../assets/images/about-bg-new.jpg') no-repeat top center;
+    @include media-query($on-laptop) {
+      background: none;
+    }
+    background: url('../assets/images/about-bg.jpg') no-repeat top center;
     background-size: cover;
     padding-top: 150px;
     padding-bottom: 150px;

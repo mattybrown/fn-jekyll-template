@@ -44,7 +44,7 @@
   }
 
   p {
-    color: #757575;
+    color: $text-color;
     font-size: 14px;
     font-weight: normal;
     line-height: 24px;
@@ -93,7 +93,7 @@
     background: $brand-color;
     border: 0;
     border-radius: 3px;
-    color: #ffffff;
+    color: $background-color;
     font-size: inherit;
     font-weight: 500;
     padding: 14px 20px;

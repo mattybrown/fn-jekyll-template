@@ -5,55 +5,58 @@
       <div class="col-md-4 col-sm-4">
         <div class="footer-thumb">
           <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
-          <p>Fusce at libero iaculis, venenatis augue quis, pharetra lorem. Curabitur ut dolor eu elit consequat ultricies.</p>
 
           <div class="contact-info">
             <p><i class="fa fa-phone"></i> {{ site.mobile }}</p>
             <p><i class="fa fa-envelope-o"></i> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
           </div>
+          <ul class="social-icon">
+            {%- if site.facebook -%}
+              <li><a href="https://www.facebook.com/{{ site.facebook }}" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+            {%- endif -%}
+            {%- if site.twitter -%}
+            <li><a href="https://twitter.com/{{ site.twitter }}" class="fa fa-twitter"></a></li>
+            {%- endif -%}
+            {%- if site.instagram -%}
+            <li><a href="https://www.instagram.com/{{ site.instagram }}" class="fa fa-instagram"></a></li>
+            {%- endif -%}
+            {%- if site.linkedin -%}
+            <li><a href="https://www.linkedin.com/in/{{ site.linkedin }}" class="fa fa-linkedin"></a></li>
+            {%- endif -%}
+          </ul>
         </div>
       </div>
 
       <div class="col-md-4 col-sm-4">
         <div class="footer-thumb">
         <h4 class="wow fadeInUp" data-wow-delay="0.4s">Latest News</h4>
-          <div class="latest-stories">
-            <div class="stories-image">
-              <a href="#"><img src="assets/images/news-image.jpg" class="img-responsive" alt=""></a>
+        {%- if site.posts.size > 0 -%}
+          {%- for post in site.posts -%}
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <div class="latest-stories">
+              <div class="stories-image">
+                <a href="{{ post.url }}"><img src="{{ post.image | relative_url }}" class="img-responsive" alt=""></a>
+              </div>
+              <div class="stories-info">
+                <a href="{{ post.url }}"><h5>{{ post.title | escape }}</h5></a>
+                <span>{{ post.date | date: date_format }}</span>
+              </div>
             </div>
-            <div class="stories-info">
-              <a href="#"><h5>Amazing Technology</h5></a>
-              <span>March 08, 2018</span>
-            </div>
-          </div>
-
-          <div class="latest-stories">
-            <div class="stories-image">
-              <a href="#"><img src="assets/images/news-image.jpg" class="img-responsive" alt=""></a>
-            </div>
-            <div class="stories-info">
-              <a href="#"><h5>New Healing Process</h5></a>
-              <span>February 20, 2018</span>
-            </div>
-          </div>
+          {%- endfor -%}
+        {%- endif -%}
         </div>
       </div>
 
       <div class="col-md-4 col-sm-4">
         <div class="footer-thumb">
           <div class="opening-hours">
-            <h4 class="wow fadeInUp" data-wow-delay="0.4s">Opening Hours</h4>
+            <h4 class="wow fadeInUp" data-wow-delay="0.4s">Hours</h4>
+            <p>Please feel free to call between the following hours.</p>
             <p>Monday - Friday <span>06:00 AM - 10:00 PM</span></p>
             <p>Saturday <span>09:00 AM - 08:00 PM</span></p>
-            <p>Sunday <span>Closed</span></p>
+            <p>Sunday <span>09:00 AM - 05:00 PM</span></p>
+            <p>Office hours are weekdays <span>09:00 AM - 05:00 PM</span></p>
           </div>
-
-          <ul class="social-icon">
-            <li><a href="https://www.facebook.com/{{ site.facebook }}" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-            <li><a href="https://twitter.com/{{ site.twitter }}" class="fa fa-twitter"></a></li>
-            <li><a href="https://www.instagram.com/{{ site.instagram }}" class="fa fa-instagram"></a></li>
-            <li><a href="https://www.linkedin.com/in/{{ site.linkedin }}" class="fa fa-linkedin"></a></li>
-          </ul>
         </div>
       </div>
 
@@ -61,11 +64,12 @@
         <div class="col-md-4 col-sm-6">
           <div class="copyright-text">
             <p>Copyright &copy; {{ site.title }}</p>
+            <p>First National Marlborough Limited - Licensed Agent REAA 2008</p>
           </div>
         </div>
         <div class="col-md-6 col-sm-6">
           <div class="footer-link">
-            <a href="#">Home</a>
+            <a href="{{ site.url }}">Home</a>
             <a href="#">About Us</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Contact</a>
