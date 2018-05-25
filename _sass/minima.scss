@@ -2,7 +2,7 @@
 
 // Define defaults for each variable.
 
-$base-font-family: 'Poppins', sans-serif;
+$base-font-family: 'Open Sans', arial, sans-serif;
 $base-font-size:   14px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -47,8 +47,7 @@ $on-desktop:       1200px !default;
 
 // Import partials.
 @import
-  "minima/base",
   "minima/layout"
 ;
 // Import Google font
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');

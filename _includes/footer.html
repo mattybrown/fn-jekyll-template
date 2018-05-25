@@ -1,18 +1,19 @@
-<footer data-stellar-background-ratio="5">
+<footer>
   <div class="container">
     <div class="row">
-
-      <div class="col-md-4 col-sm-4">
-        <div class="footer-thumb">
-          <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
-
-          <div class="contact-info">
-            <p><i class="fa fa-phone"></i> {{ site.mobile }}</p>
-            <p><i class="fa fa-envelope-o"></i> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-          </div>
-          <ul class="social-icon">
+      <div class="col-md-6">
+        <div class="copyright-text">
+          <p>
+          Copyright &copy; 2017, Simon Green - Licensed Salesperson REAA 2008<br>
+          First National Marlborough Ltd - Licensed Agent REAA 2008
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="social-icons">
+          <ul>
             {%- if site.facebook -%}
-              <li><a href="https://www.facebook.com/{{ site.facebook }}" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+              <li><a href="https://www.facebook.com/{{ site.facebook }}" class="fa fa-facebook-square"></a></li>
             {%- endif -%}
             {%- if site.twitter -%}
             <li><a href="https://twitter.com/{{ site.twitter }}" class="fa fa-twitter"></a></li>
@@ -26,62 +27,6 @@
           </ul>
         </div>
       </div>
-
-      <div class="col-md-4 col-sm-4">
-        <div class="footer-thumb">
-        <h4 class="wow fadeInUp" data-wow-delay="0.4s">Latest News</h4>
-        {%- if site.posts.size > 0 -%}
-          {%- for post in site.posts -%}
-            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <div class="latest-stories">
-              <div class="stories-image">
-                <a href="{{ post.url }}"><img src="{{ post.image | relative_url }}" class="img-responsive" alt=""></a>
-              </div>
-              <div class="stories-info">
-                <a href="{{ post.url }}"><h5>{{ post.title | escape }}</h5></a>
-                <span>{{ post.date | date: date_format }}</span>
-              </div>
-            </div>
-          {%- endfor -%}
-        {%- endif -%}
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-4">
-        <div class="footer-thumb">
-          <div class="opening-hours">
-            <h4 class="wow fadeInUp" data-wow-delay="0.4s">Hours</h4>
-            <p>Please feel free to call between the following hours.</p>
-            <p>Monday - Friday <span>06:00 AM - 10:00 PM</span></p>
-            <p>Saturday <span>09:00 AM - 08:00 PM</span></p>
-            <p>Sunday <span>09:00 AM - 05:00 PM</span></p>
-            <p>Office hours are weekdays <span>09:00 AM - 05:00 PM</span></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-12 col-sm-12 border-top">
-        <div class="col-md-4 col-sm-6">
-          <div class="copyright-text">
-            <p>Copyright &copy; {{ site.title }}</p>
-            <p>First National Marlborough Limited - Licensed Agent REAA 2008</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <div class="footer-link">
-            <a href="{{ site.url }}">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Contact</a>
-          </div>
-        </div>
-        <div class="col-md-2 col-sm-2 text-align-center">
-          <div class="angle-up-btn">
-            <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </footer>

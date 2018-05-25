@@ -8,11 +8,16 @@
   <link rel="stylesheet" href="{{ "assets/animate.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "assets/owl.carousel.min.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "assets/owl.theme.default.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "assets/hero-slider.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "assets/main.css" | relative_url }}">
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
   {%- feed_meta -%}
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
+
+  {%- include analytics.html -%}
+
 
   <title>{{ site.title }}</title>
 </head>

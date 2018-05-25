@@ -4,51 +4,114 @@ layout: default
 
 {%- include slider.html -%}
 
-<section id="about">
-  <div class="container">
-    <div class="row">
-
-      <div class="col-md-6 col-sm-6">
-        <div class="about-info">
-          <h2 class="wow fadeInUp" data-wow-delay="0.6s">Getting the best price for your biggest asset</h2>
-          <div class="wow fadeInUp" data-wow-delay="0.8s">
-            <p>We are meticulous planners with the work ethic and ability to listen carefully and implement plans to achieve the best price for you, whether your property is Residential, Lifestyle, or Rural.</p>
-            <p>If you are seeking an Agent who will be extremely loyal, work hard with a well thought out plan to achieve what <strong>you</strong> seek, then don't hesitate. Give us a call today.</p>
-          </div>
-          <figure class="profile wow fadeInUp" data-wow-delay="1s">
-            <img src="assets/images/Ian-Fyfe.jpg" class="img-responsive" alt="">
-            <figcaption>
-              <h3>Ian Fyfe</h3>
-              <p>Licensed Salesperson REAA 2008</p>
-            </figcaption>
-          </figure>
-          <figure class="profile wow fadeInUp" data-wow-delay="1s">
-            <img src="assets/images/Jenny-Fyfe.jpg" class="img-responsive" alt="">
-            <figcaption>
-              <h3>Jenny Fyfe</h3>
-              <p>Licensed Salesperson REAA 2008</p>
-            </figcaption>
-          </figure>
+<div id="about" class="page-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h4>What I Do</h4>
+                    <div class="line-dec"></div>
+                </div>
+            </div>
         </div>
-      </div>
-
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-item first-service">
+                    <div class="icon"></div>
+                    <h4>Property Advice</h4>
+                    <p>Whether you are looking for a free market appraisal for your house, or advice on presentation to attract premium buyers. I can offer free advice on a range of topics.</p>
+                </div>
+            </div>
+             <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-item second-service">
+                    <div class="icon"></div>
+                    <h4>Creative Ideas</h4>
+                    <p>I work with my team to generate creative solutions for common problems. Buying or selling, get in touch and together we can develop a creative brief to achieve your goals.</p>
+                </div>
+            </div>
+             <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-item third-service">
+                    <div class="icon"></div>
+                    <h4>Get The Best Price</h4>
+                    <p>At First National Marlborough, we work as a team to achieve the best market price for your property. Utilising a comprehensive buyer database and decades of collective experience, I am confident that I can get the best price for your house.</p>
+                </div>
+            </div>
+             <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-item fourth-service">
+                    <div class="icon"></div>
+                    <h4>Superior Marketing</h4>
+                    <p>First National Marlborough has some of the most clever, knowledgable and handsome creative professionals in the region. We target multiple channels using a variety of media formats to put your property front and center.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
+</div>
+
+<div id="what-we-do">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="left-text">
+                  <h3>Simon Green</h3>
+                  <h4>About me</h4>
+                  <p>
+                    Simon Green is a Marlburian from day one attending Renwick Primary then Marlborough Boys College. Upon leaving school Simon progressed through from driving trucks to managing a transport company. The wide variety of management skills accumulated during this period will be essential elements in his new career path. Over the years Simon’s determination to be successful shaped both his career and family. As the father of four young sons Simon acknowledges that their future will be reliant on both he and his extremely supportive wife Hannah’s efforts. Simon is extremely motivated to make his Real Estate career one to be proud of and his decision to join First National Marlborough was based primarily upon its well-known history of being extremely successful, family orientated and supportive of Marlburians.
+                  </p>
+
+                  <h3>Get your free market appraisal today</h3>
+                  <br />
+                  <ul>
+                    <li>
+                      <div class="primary-button">
+                          <a href="#" class="scroll-link" data-id="contact">Contact Me</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="right-image">
+                    <img src="{{ "assets/images/what-i-do.png" | relative_url }}" alt="What I do for my clients">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {%- include listings-carousel.html -%}
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+{%- include solds.html -%}
 
-  {{ content }}
+<div id="fun-facts">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="fact-item">
+          <div class="counter" data-count="926">0</div>
+          <span>Open Homes</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="fact-item">
+          <div class="counter" data-count="214">0</div>
+          <span>Happy Families</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="fact-item">
+          <div class="counter" data-count="118">0</div>
+          <span>Successful Deals</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="fact-item">
+          <div class="counter" data-count="16">0</div>
+          <span>Total Awards</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 {%- include contact-form.html -%}
-
-{%- include news.html -%}
-
-
-
-</div>
